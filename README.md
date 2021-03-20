@@ -13,4 +13,16 @@ while (left <= right)
         x[mid] > t: 	right = mid -1;
 return - 1;
 ```
+<<<<<<< HEAD
+>>>>>>> chaoyue
+=======
+
+```cpp
+#include <iostream>
+#include <cmap>
+using namespace std;
+void main(){
+cout<<"test"<<endl;
+}
+```
 >>>>>>> chaoyue
