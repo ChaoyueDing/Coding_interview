@@ -29,6 +29,10 @@ int findContentChildren(vector<int>& g, vector<int>& s) {
 int main(){
     vector<int> g = {1, 2, 3};
     vector<int> s = {3};
+<<<<<<< HEAD
     findContentChildren(g, s);
+=======
+    cout<<findContentChildren(g, s);
+>>>>>>> chaoyue
     return 0;
 }
