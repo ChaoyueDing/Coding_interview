@@ -8,6 +8,7 @@ int maxProfit(vector<int>& prices) {
     return *max-*min;
 }
 
+
 // 自己的解法
 // 涨了就加到count中，并且要计算当前利润，更新statu，降了就更新status
 int maxProfit(vector<int>& prices) {
