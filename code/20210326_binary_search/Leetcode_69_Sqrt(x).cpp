@@ -1,5 +1,9 @@
-// Sqrt(x) (Easy)
+// L69: Sqrt(x) (Easy)
+// 时间复杂度：时间复杂度：O(logx)，即为二分查找需要的次数。
+// 空间复杂度：O(1)
+
 /*
+目标：找到 mid*mid<=x 的最大整数
 定义ans变量，当mid*mid<=x时，记录ans=mid，并且right左移；
 否则，left右移。
 */
