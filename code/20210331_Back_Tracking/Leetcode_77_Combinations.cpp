@@ -1,6 +1,6 @@
 // L77: Combinations (Medium)
-// 时间复杂度：
-// 空间复杂度：
+// 时间复杂度：O((n k)*k),注(n k)为n上，k下，代表从n个选择k个数的复杂度，*k代表存储一次排列的复杂度
+// 空间复杂度：O(n+k)=O(n)，即递归使用栈空间的空间代价和临时数组 \rm temptemp 的空间代价。
 
 #include<bits/stdc++.h>
 using namespace std;
