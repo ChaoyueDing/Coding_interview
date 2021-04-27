@@ -8,7 +8,7 @@ struct TreeNode {
 	}
 };*/
 
-/* solutions
+/* solution: preorder traversal + recursive judgement
 若树 B 是树 A 的子结构，则子结构的根节点可能为树 A 的任意一个节点。因此，判断树 B 是否是树 A 的子结构，需完成以下两步工作：
 先序遍历树 A 中的每个节点An（对应函数 isSubStructure(A, B)）
 判断树 A 中 以 An为根节点的子树 是否包含树 B 。（对应函数 recur(A, B)）
