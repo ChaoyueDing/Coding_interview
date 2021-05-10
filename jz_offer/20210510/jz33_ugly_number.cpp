@@ -2,6 +2,16 @@
 a, b, c分别记录当前*2，*3，*5已经分别乘到dp中的哪个元素了，因为dp中任何一个元素*2,*3,*5都是一个丑数。
 dp[0] = 1; // 1是第一个丑数
 */
+#include<iostream>
+#include<vector>
+#include<map>
+#include<set>
+#include<stack>
+#include<queue>
+#include<string>
+#include<algorithm>
+using namespace std;
+
 class Solution {
 public:
     int GetUglyNumber_Solution(int n) {
