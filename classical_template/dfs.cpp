@@ -1,6 +1,11 @@
-/* dfs and backtracking
+/* dfs and backtracking main idea
 dfs: only need to count
 backtracking: the order of the count is needed
+*/
+
+/* matters needing attention & error-prone point
+1. dfs,bfs,backtracking的dfs函数不加引用会引发血案，造成非常非常严重的后果。
+    现象：结果为0；结果与标准结果相差甚远。
 */
 
 /* template 1: permutations
