@@ -19,6 +19,9 @@
 p->next = new ListNode() + p=p->next + p->val=sum%10 简化成
 p->next = new ListNode(sum % 10) + p=p->next
  */
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
