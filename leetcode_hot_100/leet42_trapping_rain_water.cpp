@@ -2,6 +2,8 @@
 using namespace std;
 
 /* O(n), O(n)动态规划
+leftMax[i]表示i位置左侧所有元素中的最大值。
+rightMax[i]表示i位置右侧所有元素中的最大值。
 */
 
 class Solution {
@@ -36,6 +38,11 @@ public:
 
 
 /* O(n), O(1)双指针
+leftMax记录left指针左侧的最大值（包括left），rightMax记录right指针右侧的最大值。
+left和right走的原则是：谁的height小就走谁。所以这就导致了leftMax和rightMax是交替增大的。
+当height[left]<height[right]时，走left，此刻height[right]必定为rightMax，
+故推.出不走的那个必定为leftMax或者rightMax，并且为此刻的全局的max，所以走的那个可以计算结果，因为走的那侧的max为两个max中的较小值。h
+因为
 */
 
 class Solution {
