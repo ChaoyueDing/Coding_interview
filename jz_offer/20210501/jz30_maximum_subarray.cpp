@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     // dp[i]代表以元素nums[i]为结尾的连续子数组最大和
