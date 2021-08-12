@@ -1,6 +1,9 @@
-Input: s = "babad"
-Output: "bab"
-Note: "aba" is also a valid answer.
+#include<bits/stdc++.h>
+using namespace std;
+
+// Input: s = "babad"
+// Output: "bab"
+// Note: "aba" is also a valid answer.
 
 /* 动态规划
 状态转移方程: dp[i][j]表示子串[i, j]是不是回文串
@@ -25,13 +28,10 @@ public:
         int len = s.size();
         int max_len = 1;
         int max_i = 0;
-        
         vector<vector<int>> dp(len, vector<int>(len));
-        
         for(int i=0; i<len; i++){
             dp[i][i] = 1;
         }
-
         for(int j=1; j<len; j++){
             for(int i=0; i<j; i++){
                 if(s[i] != s[j]){
@@ -52,7 +52,6 @@ public:
                 }
             }
         }
-
         return s.substr(max_i, max_len);
     }
 };

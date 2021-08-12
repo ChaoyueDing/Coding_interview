@@ -3,6 +3,7 @@ using namespace std;
 
 class Solution {
 public:
+    // dp[i]表示到i位置为止的最长上升子序列的长度，该子序列不一定以nums[i]为结尾。
     // 对于每个元素i判断他前面的元素j，首先i要大于j，其次如果dp[j]+1>dp[i]，则取前者。
     // 返回最长递增子序列的长度，并返回ascii码最小的，即字典序的最长子序列。
     int lengthOfLIS(vector<int>& nums) {

@@ -123,13 +123,13 @@ public:
             //     return INT_MAX;
             // }else if(sign && -ans < INT_MIN){
             //     return INT_MIN;
-            i++;  //***忘记i++导致最后结果未11111111
+            i++; //***忘记i++导致最后结果未11111111
         }
-        while(i<str.size() && str[i]==' ')  // 去除后置空格
+        while (i < str.size() && str[i] == ' ') // 去除后置空格
             i++;
-        if(i<str.size() && !isdigit(str[i]))  // 如果最后存在非空格，非数字的非法字符，则返回0。
+        if (i < str.size() && !isdigit(str[i])) // 如果最后存在非空格，非数字的非法字符，则返回0。
             return 0;
-            
+
         // 如果不用long long的话使用res和INT_MAX去比较，
         // (1) res>INT_MAX/10 || (res==INT_MAX/10 && (s[i]-'0'>INT_MAX%10))，则return INT_MAX
         // (1) resI<NT_MIN/10 || (res==INT_MIN/10 && (s[i]-'0'<INT_MIN%10))，则return INT_MIN
@@ -140,11 +140,10 @@ public:
         // if(res < Integer.MIN_VALUE/10 || (res == Integer.MIN_VALUE/10&&-num<Integer.MIN_VALUE%10)){
         //     return Integer.MIN_VALUE;
         // }
-        
+
         return sign ? -ans : ans;
     }
 };
-
 
 int main()
 {

@@ -32,7 +32,7 @@ void swap(int &a, int& b)
 int partition(vector<int> &nums, int l, int r)  // 单向扫描版本，pivot为nums[l]
 //***nums忘了加引用
 {
-    int i=l;
+    int i=l;  // left
     int pivot = nums[l];
     for(int j=l+1; j<=r; j++)  //***分号写成了逗号
     {
@@ -72,8 +72,9 @@ int findKthLargest(vector<int>& nums, int k) {
 using namespace std;
 int main()
 {
-    vector<int> vec = {7, 6, 5, 4, 3, 2, 14};
-    int a = 2;
+    // vector<int> vec = {7, 6, 5, 4, 3, 2, 14};
+    vector<int> vec = {4, 3, 2, 1};
+    int a = 1;
     cout<<findKthLargest(vec, a);
     return 0;
 }
