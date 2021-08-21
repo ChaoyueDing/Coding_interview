@@ -59,11 +59,12 @@ ListNode* Merge(ListNode* pHead1, ListNode* pHead2) {
 // 简化后的代码，因为当pHead1或者pHead2==NULL时，仅剩下一个链表，所以此时不需要使用while循环，继续使用上面的复杂的
 // 多次调整指针的循环操作，仅仅需要使用p->next = pHead2即可，这就解决了需要循环调指针的问题，顺利的将两个链表衔接了起来。
 ListNode* mergeTwoLists(ListNode* pHead1, ListNode* pHead2) {
-    ListNode* np, *nHead;
+    ListNode* np, *nHead;  // np为new head的pointer
     if(pHead1==NULL)
         return pHead2;
     if(pHead2==NULL)
         return pHead1;
+    // val小的head为合并后链表的头节点
     if(pHead1->val <= pHead2->val){
         np = pHead1;
         pHead1 = pHead1->next;
@@ -72,9 +73,9 @@ ListNode* mergeTwoLists(ListNode* pHead1, ListNode* pHead2) {
         np = pHead2;
         pHead2 = pHead2->next;            
     }
-    nHead = np;
+    nHead = np;  // 确定new head
     while(pHead1!=NULL && pHead2!=NULL){
-        if(pHead1->val <= pHead2->val){
+        if(pHead1->val <= pHead2->val){  // np指向val小的节点
             np->next = pHead1;
             pHead1 = pHead1->next;
         }
@@ -84,7 +85,7 @@ ListNode* mergeTwoLists(ListNode* pHead1, ListNode* pHead2) {
         }
         np = np->next;
     }
-    if(pHead1!=NULL)
+    if(pHead1!=NULL)  // 当pHead1或者pHead2==NULL时，仅剩下一个链表，将剩下的非空链表接到np->next处即可。
         np->next=pHead1;
     if(pHead2!=NULL)
         np->next=pHead2;

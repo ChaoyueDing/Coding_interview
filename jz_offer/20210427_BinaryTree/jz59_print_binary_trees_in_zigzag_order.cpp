@@ -1,4 +1,7 @@
-/*
+#include<bits/stdc++.h>
+using namespace std;
+
+
 struct TreeNode {
     int val;
     struct TreeNode *left;
@@ -7,9 +10,9 @@ struct TreeNode {
             val(x), left(NULL), right(NULL) {
     }
 };
-*/
 
 // solution 1: using queue
+
 class Solution {
 public:
     vector<vector<int> > Print(TreeNode* root){

@@ -1,10 +1,13 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 /*
 难点1：如果节点的val值为负数
 难点2：return类型为char*和string的写法是有一定的区别的，char*转string，直接等。string转char* (char*)str.data()。
 难点3：有DFS和BFS两种写法，都需要掌握。
 */
 
-/*
+
 struct TreeNode {
     int val;
     struct TreeNode *left;
@@ -13,10 +16,10 @@ struct TreeNode {
             val(x), left(NULL), right(NULL) {
     }
 };
-*/
+
 
 /* solution 1: 牛客char* + DFS
-DFS序列化不需要外部函数，反序列化需要一个外部函数。因为递归deserialize(char* str)无法改变str的值，所以需要写成deseri(char *&s)
+DFS序列化不需要外部函数，反序列化需要一个外部函数。因为递归deserialize(char* str)无法改变str的值，所以需要写成deseri(char *&s)*/
 class Solution {
 public:
     char* Serialize(TreeNode *root) {    
@@ -58,12 +61,12 @@ public:
         return root;
     }
 };
-*/
 
 
 
 
-/* solution 2: 牛客char* + BFS + o&i stringstream
+
+/* solution 2: 牛客char* + BFS + o&i stringstream*/
 // BFS层次遍历 (level order traversal)写法
 class Solution {
 public:
@@ -123,14 +126,14 @@ public:
         return vec[0];
     }
 };
-*/
 
 
 
 
 
 
-/* solution 3.1: leetcode string + DFS
+
+/* solution 3.1: leetcode string + DFS*/
 class Codec {
 public:
     // Encodes a tree to a single string.
@@ -179,11 +182,10 @@ public:
         return deseri(data, p);  //***p必须传引用，否在在多层递归中无法值同步
     }
 };
-*/
 
 
 
-/* solution 3.2: leetcode string + DFS + istringstream
+/* solution 3.2: leetcode string + DFS + istringstream*/
 class Codec {
 public:
 
@@ -214,10 +216,10 @@ public:
         return root;
     }
 };
-*/
 
 
-/* solution 4.1: leetcode string + BFS + ostringstream + istringstream
+
+/* solution 4.1: leetcode string + BFS + ostringstream + istringstream*/
 class Codec {
 public:
     // 使用ostringstream将vals压入out中，然后deserialize的时候使用istringstream将vals读出，并通过快慢指针i，j来重构二叉树。
@@ -271,12 +273,12 @@ public:
         return vec[0];
     }
 };
-*/
 
 
 
 
-/* solution 4.2: leetcode string + BFS + istringstream
+
+/* solution 4.2: leetcode string + BFS + istringstream*/
 class Codec {
 public:
 
@@ -337,6 +339,6 @@ public:
     }
 };
 
-*/
+
 
 
